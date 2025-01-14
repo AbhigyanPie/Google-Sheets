@@ -1,0 +1,248 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+.header{
+    position:fixed;
+}
+.toolbar {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    background-color: #ffffff;
+    /* border-bottom: 1px solid #e0e0e0; */
+}
+.toolbar .left, .toolbar .right {
+    display: flex;
+    align-items: center;
+}
+.toolbar .left {
+    flex: 1;
+}
+.toolbar .right {
+    justify-content: flex-end;
+}
+.toolbar .left .title {
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 8px;
+    color:#5f6368;
+    position: relative;
+    bottom:8px;
+}
+.toolbar .left .icon {
+    font-size: 24px;
+    color: #34a853;
+}
+.toolbar .right .icon {
+    font-size: 20px;
+    margin-left: 16px;
+    color: #5f6368;
+}
+.toolbar .right .share-button {
+    background-color: #1a73e8;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    position: relative;
+    right: -400px;
+}
+.toolbar .right .profile {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #d9d9d9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: #ffffff;
+    margin-left: 16px;
+}
+.menu-bar {
+    display: flex;
+    align-items: center;
+    padding: 3px;
+    background-color: #ffffff;
+    /* border-bottom: 1px solid #e0e0e0; */
+    position: relative;
+    right:755px;
+    bottom:-12px;
+}
+.menu-bar .menu-item {
+    margin-right: 16px;
+    font-size: 12px;
+    color: #5f6368;
+    cursor: pointer;
+}
+.menu-bar .menu-item:hover {
+    text-decoration: underline;
+}
+
+
+/* Toolbar 2 italic, bold and all */
+.toolbar2 {
+    display: flex;
+    align-items: center;
+    background-color: #f1f3f4;
+    padding: 2px;
+    border: 1px solid #d1d5da;
+    border-radius: 50px;
+    font-size:12px;
+}
+.toolbar2 button, .toolbar span {
+    background-color: white;
+    border: 1px solid #d1d5da;
+    border-radius: 3px;
+    /* padding: 5px 10px; */
+    margin: 0 5px;
+    cursor: pointer;
+}
+.toolbar2 span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15px;
+}
+.toolbar2 i {
+    margin: 0 5px;
+    cursor: pointer;
+}
+.toolbar2 .separator {
+    border-left: 1px solid #d1d5da;
+    height: 20px;
+    margin: 0 10px;
+}
+
+.toolbar2 i:hover {
+    color: #2B6AD0; /* Light blue on hover */
+}
+
+/******************* Formula Action Container ********************************/
+.formula-action-container{
+    height: 2rem;
+    background-color: #ffffff;
+    padding-left: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+.formula-action-container > * {
+    display: inline-block;
+    margin-right: 0.7rem;
+}
+.formula-action-container > input{
+    border: none;
+    outline: none;
+    height: 70%;
+}
+.formula-icon{
+    height: 1rem;
+    width: 1rem;
+    opacity: 0.5;
+}
+.address-bar{
+    width: 5rem;
+    text-align: center ;
+}
+.formula-bar{
+    width: calc(100vw - 5rem - 0.7rem - 0.7rem - 0.7rem - 1.2rem);
+}
+
+/* SpreadSheet - Container */
+.spreadsheet-container {
+    position: relative;
+    top: 101px;
+    height: calc(100vh - 106px); /* Adjust based on your toolbar heights */
+    overflow: auto;
+}
+
+.spreadsheet {
+    border-collapse: collapse;
+}
+
+.header-row {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: #ffffff;
+}
+
+.starting-cell-column {
+    position: sticky;
+    left: 0;
+    z-index: 2;
+    background-color: #ffffff;
+    width: 30px; /* Set the width of the first column */
+}
+
+.header-cell.starting-cell {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    background-color: #ffffff;
+    width: 30px; /* Set the width of the header cell */
+}
+
+.cell {
+    min-width: 60px;
+    width: 100px;
+    height: 18px;
+    border: 1px solid #ddd;
+    padding: 2px;
+    outline: none;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.header-cell {
+    background-color: #ffffff;
+    text-align: center;
+    font-size: 9px;
+    border: 1px solid #ddd;
+    scrollbar-width: auto;
+    padding: 4px;
+    min-width: 60px;
+    width: 100px;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+/******************* Cell Props Action Container ********************************/
+
+.cellprops-action-container{
+    height: 3rem;
+    background-color: #ecf0f1;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+}
+.cellprops-action-container > * {
+    display: inline-block;
+    margin-right: 1rem;
+}
+.cellprops-action-container > *:hover{
+    cursor: pointer;
+}
+.cellprops-action-container > select{
+    border: none;
+    padding: 0.2rem;
+    border-radius: 2px;
+    outline: none;
+}
+.color-prop{
+    position: relative;
+}
+.color-prop > input{
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}

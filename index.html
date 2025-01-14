@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Google Sheets</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+    <div class = "header">
+        <div class="toolbar">
+            <div class="left">
+                <i class="fas fa-file-alt icon"></i>
+                <div class="title">Untitled spreadsheet</div>
+            </div>
+            <div class="right">
+                <!-- <i class="fas fa-comment-alt icon"></i> -->
+                <!-- <i class="fas fa-video icon"></i> -->
+                <!-- <i class="fas fa-user-friends icon"></i> -->
+                <!-- <i class="fas fa-clock icon"></i> -->
+                <!-- <i class="fas fa-cog icon"></i> -->
+                <button class="share-button">Share</button>
+                <!-- <div class="profile">A</div> -->
+            </div>
+            <div class="menu-bar">
+                <div class="menu-item">File</div>
+                <div class="menu-item">Edit</div>
+                <div class="menu-item">View</div>
+                <div class="menu-item">Insert</div>
+                <div class="menu-item">Format</div>
+                <div class="menu-item">Data</div>
+                <div class="menu-item">Tools</div>
+                <div class="menu-item">Extensions</div>
+                <div class="menu-item">Help</div>
+            </div>
+        </div>
+
+        <!-- <div class="toolbar2"> -->
+            <!-- <button>-</button>
+            <span>10</span>
+            <button>+</button>
+            <div class="separator"></div>
+            <i class="fas fa-bold"></i>
+            <i class="fas fa-italic"></i>
+            <i class="fas fa-sync-alt"></i>
+            <i class="fas fa-font"></i> -->
+        <!-- </div> -->
+
+        <!--    /******************* Cell Props Action Container ********************************/-->
+    <!-- <div class="cellprops-action-container">
+        <span class="material-icons copy">content_copy</span>
+        <span class="material-icons paste">content_paste</span>
+        <span class="material-icons cut">content_cut</span>
+        <select class="font-family-prop">
+            <option value="monospace">Monospace</option>
+            <option value="san-serif">San-Serif</option>
+            <option value="fantasy">Fantasy</option>
+            <option value="cursive">Cursive</option>
+        </select>
+        <select class="font-size-prop">
+            <option value="14">14</option>
+            <option value="16">16</option>
+            <option value="18">18</option>
+            <option value="20">20</option>
+        </select>
+        <span class="material-icons bold">format_bold</span>
+        <span class="material-icons italic">format_italic</span>
+        <span class="material-icons underline">format_underlined</span>
+        <span class="left material-icons alignment">format_align_left</span>
+        <span class="center material-icons alignment">format_align_justify</span>
+        <span class="right material-icons alignment">format_align_right</span>
+        <div class="color-prop">
+            <span class="material-icons">format_color_text</span>
+            <input type="color" class="font-color-prop" >
+        </div>
+        <div class="color-prop">
+            <span class="material-icons">format_color_fill</span>
+            <input type="color" class="bg-color-prop" >
+        </div>
+        <span class="material-icons upload">cloud_upload</span>
+        <span class="material-icons download">cloud_download</span>
+    </div> -->
+
+        <!-- Formula bar -->
+        <div class="formula-action-container">
+            <input type="text" readonly class="address-bar">
+            <img class ="formula-icon" width="20" height="20" src="/images/formula-fx.png"/>
+            <input type="text" class="formula-bar">
+        </div>
+    </div>
+        
+        <!-- <div class="spreadsheet">
+            <div class="row">
+                <div class="cell">A1</div>
+                <div class="cell" colspan="15">Type "@" then a file name to insert a file smart chip</div>
+            </div>
+            <!-- Add more rows and cells as needed -->
+        <!-- </div> -->
+
+        <!-- <canvas id="spreadsheet"></canvas>
+        <div id="selectedCellBorder"></div>
+        <div id="selectedCellFormula"></div>
+        <div id="selectedRange"></div>
+        <div contenteditable="true" id="textInput"></div>
+        <script src="spreadSheet.js"></script> -->
+
+        <div class="spreadsheet-container">
+            <div class="toolbar2">
+                <button id="bold-btn" class="active"><i class="fas fa-bold"></i></button>
+            </div>
+
+            <table class="spreadsheet" id="spreadsheet"></table>
+        </div>
+        <script src="spreadSheet.js"></script>
+        <script src="nav.js"></script>
+
+    </body>
+</html>
